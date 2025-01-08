@@ -6,8 +6,12 @@ fileInput.addEventListener("change", function () {
   const file = fileInput.files[0];
   if (file) {
     fileNameDisplay.textContent = file.name;
-    uploadSuccess.style.display = "inline-block";
+    uploadSuccess.style.display = "flex";
     removeFileButton.style.display = "inline";
+    // Hide the container after 3 seconds
+    setTimeout(() => {
+      uploadSuccess.style.display = "none";
+    }, 2000);
   } else {
     resetFileInput();
   }
