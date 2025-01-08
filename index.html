@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Converter</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="import-box">
+        <p class="import-header">Import your Image</p>
+        <p class="sub-heading">
+          Please make sure the image is in .webp format only.
+        </p>
+        <div class="dotted-box">
+          <p class="sub-heading">Drop your image</p>
+          <p class="sub-heading">or</p>
+          <label for="webpInput" class="custom-upload-button">
+            <span>Upload Image</span>
+          </label>
+          <input type="file" id="webpInput" accept="image/webp" />
+          <div id="file-info" class="file-info">
+            <span class="file-icon">📂</span>
+            <span id="file-name">No file chosen</span>
+            <button
+              id="removeFile"
+              class="remove-file-btn"
+              style="display: none"
+            >
+              ❌
+            </button>
+          </div>
+          <button id="convertBtn">Convert to JPEG</button>
+          <div id="output">
+            <a id="downloadLink" style="display: none">Download JPEG</a>
+          </div>
+        </div>
+        <div id="upload-success" style="display: none">
+          <p class="success-message">Image uploaded successfully!</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
