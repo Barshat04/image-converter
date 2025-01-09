@@ -2,6 +2,7 @@ const fileInput = document.getElementById("webpInput");
 const fileNameDisplay = document.getElementById("file-name");
 const removeFileButton = document.getElementById("removeFile");
 const uploadSuccess = document.getElementById("upload-success");
+const successMessage = document.getElementById("success-message");
 fileInput.addEventListener("change", function () {
   const file = fileInput.files[0];
   if (file) {
@@ -30,13 +31,15 @@ function resetFileInput() {
   removeFileButton.style.display = "none";
   //hide upload success message
   uploadSuccess.style.display = "none";
+
+  downloadLink.style.display = "none";
 }
 
 document.getElementById("convertBtn").addEventListener("click", () => {
   const input = document.getElementById("webpInput");
   const file = input.files[0];
   if (!file) {
-    alert("Please select a file first");
+    alert("Please upload an image first");
     return;
   }
 
@@ -60,6 +63,15 @@ document.getElementById("convertBtn").addEventListener("click", () => {
       downloadLink.download = "converted-image.jpg";
       downloadLink.style.display = "inline-block";
       downloadLink.textContent = "Download JPEG";
+
+      if (jpegDataUrl) {
+        // Show upload success message
+        successMessage.textContent = "Converted successfully!";
+        uploadSuccess.style.display = "flex";
+        setTimeout(() => {
+          uploadSuccess.style.display = "none";
+        }, 2000);
+      }
     };
   };
 

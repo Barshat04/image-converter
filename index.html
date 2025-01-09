@@ -6,6 +6,12 @@
     <title>Image Converter</title>
 
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css"
+      type="text/css"
+    />
     <script
       src="https://kit.fontawesome.com/7a2fd8fbc2.js"
       crossorigin="anonymous"
@@ -19,14 +25,17 @@
           Please make sure the image is in .webp format only.
         </p>
         <div class="dotted-box">
-          <p class="sub-heading">Drop your image</p>
-          <p class="sub-heading">or</p>
+          <!--<p class="sub-heading">Drop your image</p>
+          <p class="sub-heading">or</p>-->
+
           <label for="webpInput" class="custom-upload-button">
             <span>Upload Image</span>
           </label>
           <input type="file" id="webpInput" accept="image/webp" />
           <div id="file-info" class="file-info">
-            <span class="file-icon">📂</span>
+            <span class="file-icon"
+              ><i class="fa-regular fa-file-image"></i
+            ></span>
             <span id="file-name">No file chosen</span>
             <button
               id="removeFile"
@@ -45,7 +54,7 @@
     </div>
     <div id="upload-success" style="display: none">
       <i class="fa-solid fa-circle-check"></i>
-      <p class="success-message">Image uploaded successfully!</p>
+      <p id="success-message">Image uploaded successfully!</p>
     </div>
     <script src="script.js"></script>
   </body>
