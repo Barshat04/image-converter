@@ -3,7 +3,35 @@
   margin: 0;
   font-family: poppins, Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.menu {
+  height: 70px;
+  max-width: 1080px;
+  margin: auto;
+  display: flex;
+  box-shadow: 0 0 20 rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: red;
+}
+.menu .logo-text i {
+  font-size: 22px;
+  margin-right: 8px;
+}
+.menu li,
+.menu a {
+  list-style: none;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+}
+.menu ul {
+  display: flex;
+  gap: 50px;
+}
 .container {
   background-color: #d9d9d9;
   height: 100vh;
@@ -140,4 +168,17 @@ a#downloadLink:hover {
   font-size: 35px;
   padding-right: 10px;
   text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+  height: 60px;
+  align-content: center;
+}
+footer .blue-text {
+  color: blue;
 }
