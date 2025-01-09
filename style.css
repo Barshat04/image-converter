@@ -8,14 +8,14 @@
   max-width: 1080px;
   margin: auto;
   display: flex;
-  box-shadow: 0 0 20 rgba(0, 0, 0, 0.3);
   justify-content: space-between;
   align-items: center;
 }
+
 .menu .logo-text {
   font-size: 22px;
   font-weight: 700;
-  color: red;
+  color: #007bff;
 }
 .menu .logo-text i {
   font-size: 22px;
@@ -27,6 +27,11 @@
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
+  color: #131313;
+}
+
+.menu li a:hover {
+  color: #007bff;
 }
 .menu ul {
   display: flex;
@@ -179,6 +184,7 @@ footer {
   height: 60px;
   align-content: center;
 }
-footer .blue-text {
+footer .blue-text a {
   color: blue;
+  text-decoration: none;
 }
