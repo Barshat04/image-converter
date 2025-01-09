@@ -39,9 +39,18 @@
   display: flex;
   gap: 50px;
 }
+
+.headline {
+  padding-top: 20px;
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center;
+  background-color: #d9d9d9;
+  color: #007bff;
+}
 .container {
   background-color: #d9d9d9;
-  height: 100vh;
+  height: 80vh;
   display: flex;
 }
 
@@ -163,7 +172,7 @@ a#downloadLink:hover {
   padding: 20px;
   position: absolute;
   align-items: center;
-  bottom: 30px;
+  bottom: 100px;
   right: 30px;
   color: green;
   background-color: #fff;
