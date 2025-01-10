@@ -3,7 +3,17 @@
   margin: 0;
   font-family: poppins, Verdana, Geneva, Tahoma, sans-serif;
 }
+
+body {
+  background-color: #d9d9d9;
+}
+nav {
+  width: 100%;
+  background-color: #fff;
+}
 .menu {
+  padding: 5px;
+
   height: 70px;
   max-width: 1080px;
   margin: auto;
@@ -198,4 +208,37 @@ footer {
 footer .blue-text a {
   color: blue;
   text-decoration: none;
+}
+
+/*Mobile devices*/
+@media only screen and (max-width: 768px) {
+  .menu ul {
+    gap: 20px;
+  }
+  .menu .logo-text i {
+    font-size: 14px;
+  }
+  .menu .logo-text a,
+  .menu li,
+  .menu ul li a {
+    font-size: 14px;
+  }
+  .headline {
+    padding: 10px;
+    font-size: 25px;
+  }
+  .container {
+    padding: 10px;
+    height: auto;
+  }
+  .import-box {
+    width: 100%;
+    padding: 20px;
+  }
+  footer {
+    overflow: hidden;
+  }
+  .footer-text {
+    font-size: 14px;
+  }
 }
